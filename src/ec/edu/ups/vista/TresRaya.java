@@ -31,38 +31,38 @@ public class TresRaya extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        btnNueve = new javax.swing.JButton();
+        btnUno = new javax.swing.JButton();
+        btnDos = new javax.swing.JButton();
+        btnTres = new javax.swing.JButton();
+        btnCuatro = new javax.swing.JButton();
+        btnCinco = new javax.swing.JButton();
+        btnSeis = new javax.swing.JButton();
+        btnSiete = new javax.swing.JButton();
+        btnOcho = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(220, 280, 60, 40);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(20, 110, 60, 40);
-        getContentPane().add(jButton3);
-        jButton3.setBounds(120, 110, 60, 40);
-        getContentPane().add(jButton4);
-        jButton4.setBounds(220, 110, 60, 40);
-        getContentPane().add(jButton5);
-        jButton5.setBounds(20, 190, 60, 40);
-        getContentPane().add(jButton6);
-        jButton6.setBounds(120, 190, 60, 40);
-        getContentPane().add(jButton7);
-        jButton7.setBounds(220, 190, 60, 40);
-        getContentPane().add(jButton8);
-        jButton8.setBounds(20, 280, 60, 40);
-        getContentPane().add(jButton9);
-        jButton9.setBounds(120, 280, 60, 40);
+        getContentPane().add(btnNueve);
+        btnNueve.setBounds(220, 280, 60, 40);
+        getContentPane().add(btnUno);
+        btnUno.setBounds(20, 110, 60, 40);
+        getContentPane().add(btnDos);
+        btnDos.setBounds(120, 110, 60, 40);
+        getContentPane().add(btnTres);
+        btnTres.setBounds(220, 110, 60, 40);
+        getContentPane().add(btnCuatro);
+        btnCuatro.setBounds(20, 190, 60, 40);
+        getContentPane().add(btnCinco);
+        btnCinco.setBounds(120, 190, 60, 40);
+        getContentPane().add(btnSeis);
+        btnSeis.setBounds(220, 190, 60, 40);
+        getContentPane().add(btnSiete);
+        btnSiete.setBounds(20, 280, 60, 40);
+        getContentPane().add(btnOcho);
+        btnOcho.setBounds(120, 280, 60, 40);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
         jLabel1.setText("Tres en Raya");
@@ -112,15 +112,15 @@ public class TresRaya extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton btnCinco;
+    private javax.swing.JButton btnCuatro;
+    private javax.swing.JButton btnDos;
+    private javax.swing.JButton btnNueve;
+    private javax.swing.JButton btnOcho;
+    private javax.swing.JButton btnSeis;
+    private javax.swing.JButton btnSiete;
+    private javax.swing.JButton btnTres;
+    private javax.swing.JButton btnUno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

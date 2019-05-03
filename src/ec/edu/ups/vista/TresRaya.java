@@ -17,7 +17,7 @@ public class TresRaya extends javax.swing.JFrame {
     public TresRaya() {
         initComponents();
         setTitle("Tres en raya");
-        setSize(310, 385);
+        setSize(310, 435);
         setLocation(300,200);
         setLocationRelativeTo(null);
         turno=contp=contimp=1;
@@ -40,6 +40,7 @@ public class TresRaya extends javax.swing.JFrame {
         btnOcho = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btnReiniciar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -125,56 +126,71 @@ public class TresRaya extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 90, 290, 240);
 
+        btnReiniciar.setBackground(new java.awt.Color(255, 255, 255));
+        btnReiniciar.setFont(new java.awt.Font("Calibri Light", 1, 24)); // NOI18N
+        btnReiniciar.setForeground(new java.awt.Color(0, 153, 153));
+        btnReiniciar.setText("Reiniciar");
+        btnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReiniciarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnReiniciar);
+        btnReiniciar.setBounds(0, 330, 290, 60);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnoActionPerformed
     
        dato(btnUno);
-       btnUno.setEnabled(false);
-       
+       maquina();
        
     }//GEN-LAST:event_btnUnoActionPerformed
 
     private void btnDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDosActionPerformed
        dato(btnDos);
-       btnUno.setEnabled(false);
+       maquina();
     }//GEN-LAST:event_btnDosActionPerformed
 
     private void btnTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTresActionPerformed
        dato(btnTres);
-       btnUno.setEnabled(false);
+       maquina();
     }//GEN-LAST:event_btnTresActionPerformed
 
     private void btnCuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuatroActionPerformed
        dato(btnCuatro);
-       btnUno.setEnabled(false);
+      maquina();
     }//GEN-LAST:event_btnCuatroActionPerformed
 
     private void btnCincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCincoActionPerformed
         dato(btnCinco);
-       btnUno.setEnabled(false);
+       maquina();
     }//GEN-LAST:event_btnCincoActionPerformed
 
     private void btnSeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeisActionPerformed
        dato(btnSeis);
-       btnUno.setEnabled(false);
+       maquina();
     }//GEN-LAST:event_btnSeisActionPerformed
 
     private void btnSieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSieteActionPerformed
        dato(btnSiete);
-       btnUno.setEnabled(false);
+       maquina();
     }//GEN-LAST:event_btnSieteActionPerformed
 
     private void btnOchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOchoActionPerformed
        dato(btnOcho);
-       btnUno.setEnabled(false);
+       maquina();
     }//GEN-LAST:event_btnOchoActionPerformed
 
     private void btnNueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNueveActionPerformed
         dato(btnNueve);
-       btnUno.setEnabled(false);
+        maquina();
     }//GEN-LAST:event_btnNueveActionPerformed
+
+    private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
+        nuevo();
+    }//GEN-LAST:event_btnReiniciarActionPerformed
 
     
     public void dato(JButton cuadro){
@@ -236,7 +252,8 @@ public class TresRaya extends javax.swing.JFrame {
                 if (!gano && contador==3){
                 
                     JOptionPane.showMessageDialog(null, "tres en raya");
-                    if(JOptionPane.showInternalConfirmDialog(null, "desea reiniciar el juego")==0){
+                    
+                    if(JOptionPane.showConfirmDialog(null, "desea reiniciar el juego")==0){
                     
                         nuevo();
                         reinicio=true;
@@ -244,6 +261,7 @@ public class TresRaya extends javax.swing.JFrame {
                     
                         gano=false;
                     }
+                    contador=0;
                     break;
                 }
                 contador=0;
@@ -255,7 +273,7 @@ public class TresRaya extends javax.swing.JFrame {
     public void nuevo(){
     
         gano = false;
-        turno=contp=contimp=2;
+        turno=contp=contimp=1;
         for(int i=0;i<cuadro.length;i++){
         
             for(int j=0;j<cuadro.length;j++){
@@ -297,8 +315,65 @@ public class TresRaya extends javax.swing.JFrame {
     }
     public void maquina(){
     
-        int p=(int)Math.random()*9;
-        
+        if(gano==false){
+        int p=(int)(Math.random()*(9-1+1)+1);
+        System.out.println(p);
+        if(p==1){
+            if(btnUno.getText().equals("")){
+                dato(btnUno);
+            }else{
+                maquina();
+            }
+        }else if(p==2){
+            if(btnDos.getText().equals("")){
+                dato(btnDos);
+            }else{
+                maquina();
+            }
+        }else if(p==3){
+            if (btnTres.getText().equals("")){
+                dato(btnTres);
+            }else{
+                maquina();
+            }
+        }else if(p==4){
+            if (btnCuatro.getText().equals("")){
+                dato(btnCuatro);
+            }else{
+                maquina();
+            }
+        }else if (p==5){
+            if(btnCinco.getText().equals("")){
+                dato(btnCinco);
+            }else{
+                maquina();
+            }
+        }else if(p==6){
+            if(btnSeis.getText().equals("")){
+                dato(btnSeis);
+            }else{
+                maquina();
+            }    
+        }else if (p==7){
+            if (btnSiete.getText().equals("")){
+                dato(btnSiete);
+            }else{
+                maquina();
+            }
+        }else if(p==8){
+            if (btnOcho.getText().equals("")){    
+                dato(btnOcho);
+            }else{
+                maquina();
+            }
+        }else if(p==9){
+            if(btnNueve.getText().equals("")){
+                dato(btnNueve);
+            }else{
+            maquina();
+            }
+        }
+        } 
     }
     
 
@@ -308,6 +383,7 @@ public class TresRaya extends javax.swing.JFrame {
     private javax.swing.JButton btnDos;
     private javax.swing.JButton btnNueve;
     private javax.swing.JButton btnOcho;
+    private javax.swing.JButton btnReiniciar;
     private javax.swing.JButton btnSeis;
     private javax.swing.JButton btnSiete;
     private javax.swing.JButton btnTres;
